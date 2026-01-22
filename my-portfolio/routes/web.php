@@ -14,10 +14,12 @@ Route::get('/about', function () {
 $name = 'Victory Kyle N. Villarno'; // Replace with YOUR name
 $course = 'Bachelor of Science in Information Technology';
 $university = 'Central Mindanao University'; // Replace with YOUR university
+$hobbies = '2D & 3D Digital Art & Animation, Game development, Working out, Currently a beginner at guitar';
 return view('about', [
 'name' => $name,
 'course' => $course,
-'university' => $university
+'university' => $university,
+'hobbies' => $hobbies
 ]);
 })->name('about');
 
@@ -32,9 +34,10 @@ return view('about', [
 
 Route::get('/projects', function () {
 $projects = [
-['title' => 'Platformer', 'description' => '2d platformer game made in godot game engine'],
-['title' => 'Rock Paper Warrior', 'description' => 'a 2d hack & slash game with the mechanics of rock paper scissors'],
-['title' => 'One Path One Fate', 'description' => '3d top-down turn based game'],
+['title' => 'Platformer Game', 'description' => '2D platformer game made in godot game engine', 'image' => '/images/plat.jpg'],
+['title' => 'Rock Paper Warrior', 'description' => 'a 2D hack & slash game with the mechanics of rock paper scissors', 'image' => '/images/RPW.png'],
+['title' => 'One Path One Fate', 'description' => '3D top-down turn-based game',  'image' => '/images/onepath.png'],
+['title' => 'Mother, mother', 'description' => '3D PC Horror game set in an abandoned mansion(Under Development)', 'image' => '/images/mansion.png'],
 ];
 return view('projects', ['projects' => $projects]);
 })->name('projects');
