@@ -14,13 +14,12 @@ Route::get('/about', function () {
 $name = 'Victory Kyle N. Villarino'; // Replace with YOUR name
 $course = 'Bachelor of Science in Information Technology';
 $university = 'Central Mindanao University'; // Replace with YOUR university
-$hobbies = ' 2D & 3D Digital Art, Working out, Game Development';
 
 return view('about', [
 'name' => $name,
 'course' => $course,
 'university' => $university,
-'hobbies' => $hobbies
+
 ]);
 })->name('about');
 
